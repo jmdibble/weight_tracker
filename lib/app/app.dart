@@ -18,6 +18,7 @@ class WeightTrackerAppState extends State<WeightTrackerApp> {
       model: _appState,
       child: MaterialApp(
         title: 'Weight Tracker',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

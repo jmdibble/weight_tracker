@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:weight_tracker/models/app_state.dart';
 import 'package:weight_tracker/models/record.dart';
+import 'package:date_format/date_format.dart';
 
 class HomeScreen extends StatefulWidget {
   static Route<dynamic> route() {
@@ -128,6 +129,7 @@ class _WeightTrackDialogState extends State<WeightTrackDialog> {
               Expanded(
                 child: TextField(
                   controller: _weightStones,
+                  textAlign: TextAlign.center,
                   keyboardType: TextInputType.number,
                   inputFormatters: <TextInputFormatter>[
                     WhitelistingTextInputFormatter.digitsOnly,
@@ -138,6 +140,7 @@ class _WeightTrackDialogState extends State<WeightTrackDialog> {
               Expanded(
                 child: TextField(
                   controller: _weightPounds,
+                  textAlign: TextAlign.center,
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
                   inputFormatters: <TextInputFormatter>[
                     WhitelistingTextInputFormatter(RegExp(r'[\d\.]+')),
